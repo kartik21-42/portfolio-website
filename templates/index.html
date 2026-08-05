@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kartik Nair | Data Analyst</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600;700&family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      // ✏️ REPLACE with your EmailJS Public Key
+      (function () {
+        emailjs.init({ publicKey: "KaiPXMYEBP_6PbOZz" });
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="particles"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">Kartik Nair</span>
+        <span class="logo-bracket">/&gt;</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <div class="terminal-window">
+          <div class="terminal-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">portfolio.py — Python 3.11</span>
+          </div>
+          <div class="terminal-body">
+            <p>
+              <span class="t-green">$</span> <span class="t-blue">python</span>
+              <span class="t-white">portfolio.py</span>
+            </p>
+            <p>
+              <span class="t-purple">Initializing</span
+              ><span class="t-white">...</span>
+            </p>
+            <p>
+              <span class="t-green">Hello, World!</span>
+              <span class="t-white">I'm</span>
+            </p>
+            <h1 class="hero-name" id="typed-name"></h1>
+            <p class="hero-role">
+              <span class="t-yellow">role</span> <span class="t-white">=</span>
+              <span class="t-green">"<span id="typed-role"></span>"</span>
+            </p>
+          </div>
+        </div>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-code"></i> View Projects
+          </a>
+          <a href="/resume" target="_blank" class="btn btn-secondary">
+            <i class="fas fa-file-alt"></i> My Resume
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-envelope"></i> Hire Me
+          </a>
+        </div>
+        <div class="social-links">
+          <a
+            href="https://github.com/kartiknair"
+            target="_blank"
+            class="social-btn"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/kartik-nair12"
+            target="_blank"
+            class="social-btn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="code-card">
+          <pre
+            class="code-snippet"
+          ><span class="c-purple">class</span> <span class="c-yellow">DataAnalyst</span><span class="c-white">:</span>
+  <span class="c-blue">def</span> <span class="c-green">__init__</span><span class="c-white">(self):</span>
+    <span class="c-white">self.name</span> <span class="c-white">=</span> <span class="c-orange">"Kartik Nair"</span>
+    <span class="c-white">self.skills</span> <span class="c-white">= [</span>
+      <span class="c-orange">"Python"</span><span class="c-white">,</span>
+      <span class="c-orange">"SQL"</span><span class="c-white">,</span>
+      <span class="c-orange">"Power BI"</span><span class="c-white">,</span>
+      <span class="c-orange">"AI / ML"</span>
+    <span class="c-white">]</span>
+    <span class="c-white">self.passion</span> <span class="c-white">=</span>
+      <span class="c-orange">"Turning data into insights"</span>
+
+  <span class="c-blue">def</span> <span class="c-green">say_hello</span><span class="c-white">(self):</span>
+    <span class="c-purple">return</span> <span class="c-orange">"Let's collaborate!"</span></pre>
+        </div>
+      </div>
+      <!-- Scroll Down Indicator -->
+      <a href="#about" class="scroll-indicator">
+        <span class="scroll-text">Scroll Down</span>
+        <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about section">
+      <div class="section-header">
+        <span class="section-tag">Beyond the resume ! </span>
+        <h2 class="section-title">Who I <span class="highlight">Am</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-avatar">
+          <div class="avatar-ring">
+            <div class="avatar-inner">
+              <i class="fas fa-user-astronaut fa-4x"></i>
+            </div>
+          </div>
+          <div class="status-badge">
+            <span class="status-dot"></span> Open to Opportunities
+          </div>
+        </div>
+        <div class="about-text">
+          <h3>Hi, I'm <span class="highlight">Kartik Nair</span> 👋</h3>
+          <p>
+            I'm a passionate <strong>Data Analyst</strong> from
+            <strong>Mumbai, India</strong>, working in the
+            <strong>IT field</strong>. I love transforming raw data into
+            meaningful insights that drive smart decisions.
+          </p>
+          <p>
+            With hands-on experience in Python, SQL, Power BI and AI tools, I
+            enjoy building data pipelines, dashboards, and analytical solutions
+            that make an impact. ☕
+          </p>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-num" data-target="2">0</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num" data-target="0">0</span>
+              <span class="stat-label">Fresher</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num" data-target="4">0</span>+
+              <span class="stat-label">Technologies</span>
+            </div>
+          </div>
+          <div class="about-actions">
+            <a href="/resume" target="_blank" class="btn btn-primary">
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fas fa-paper-plane"></i> Hire Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills section">
+      <div class="section-header">
+        <span class="section-tag">$ cat skills.txt</span>
+        <h2 class="section-title">
+          What I <span class="highlight">Bring</span>
+        </h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3><i class="fas fa-database"></i> Data & Analytics</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="fab fa-python"></i><span>Python</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-database"></i><span>SQL</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-chart-bar"></i><span>Power BI</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-brain"></i><span>AI / ML</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="70"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-tools"></i> Tools & Cloud</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="fab fa-git-alt"></i><span>Git / GitHub</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-aws"></i><span>AWS (Cloud)</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="60"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-table"></i><span>Excel / Sheets</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-code"></i> Programming</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="fab fa-html5"></i><span>HTML / CSS</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="70"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-flask"></i><span>Flask</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="65"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-chart-line"></i><span>Data Visualization</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="78"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects section">
+      <div class="section-header">
+        <span class="section-tag"># projects.py</span>
+        <h2 class="section-title">
+          My <span class="highlight">Projects</span>
+        </h2>
+      </div>
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="data">AI</button>
+        <button class="filter-btn" data-filter="ai">Data</button>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card" data-category="data python">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-brain"></i></div>
+            <div class="project-links">
+              <a
+                href="https://github.com/kartik21-42/MindEase-AI/tree/main"
+                target="_blank"
+                title="GitHub"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://mindease-ai-n3n0.onrender.com"
+                target="_blank"
+                title="Live Demo"
+                ><i class="fas fa-external-link-alt"></i
+              ></a>
+            </div>
+          </div>
+          <h3>MindEase AI — Mental Wellness Web App</h3>
+          <p>
+            A Python-based ML web app that classifies mental health conditions
+            from user and social media text using Logistic Regression with ~80%
+            accuracy. Features personalized wellness recommendations, mood
+            tracking, and longitudinal data visualization — processing 100+
+            inputs per session.
+          </p>
+          <div class="project-tags">
+            <span>Python</span><span>Machine Learning Model</span
+            ><span>AI</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="ai python">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-chart-bar"></i></div>
+            <div class="project-links">
+              <a
+                href="https://github.com/kartik21-42/Credit-Card-Fraud-Detection"
+                target="_blank"
+                title="GitHub"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://mellifluous-cassata-865afc.netlify.app/"
+                target="_blank"
+                title="Live Demo"
+                ><i class="fas fa-external-link-alt"></i
+              ></a>
+            </div>
+          </div>
+          <h3>Credit Card Fraud Detection Using Data Analytics</h3>
+          <p>
+            A data analysis project on 284,000+ real credit card transactions,
+            uncovering fraud patterns by amount and time, and comparing Logistic
+            Regression vs. Random Forest models to detect fraud accurately —
+            visualized through an interactive dashboard.
+          </p>
+          <div class="project-tags">
+            <span>Python</span><span>Machine Learning</span><span>Data</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact section">
+      <div class="section-header">
+        <span class="section-tag">Let's Talk</span>
+        <h2 class="section-title">
+          Get in <span class="highlight">Touch</span>
+        </h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Let's work together! 🚀</h3>
+          <p>
+            I'm actively looking for Data Analyst / IT roles. If you're hiring
+            or have a project in mind, I'd love to hear from you!
+          </p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Thane, Maharashtra, India</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:kartik.nair1717@gmail.com"
+                >kartik.nair1717@gmail.com</a
+              >
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+91 8169142336</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-briefcase"></i>
+              <span>Available Immediately · Fresher</span>
+            </div>
+          </div>
+          <div class="contact-social">
+            <a href="https://github.com/kartik21-42" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/kartik-nair12" target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper">
+          <div class="contact-form">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input
+                type="text"
+                placeholder="HR / Recruiter Name"
+                id="cf-name"
+              />
+            </div>
+            <div class="form-group">
+              <label>Your Email</label>
+              <input type="email" placeholder="hr@company.com" id="cf-email" />
+            </div>
+            <div class="form-group">
+              <label>Company / Subject</label>
+              <input
+                type="text"
+                placeholder="Company Name or Subject"
+                id="cf-subject"
+              />
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea
+                placeholder="Tell me about the role or opportunity..."
+                id="cf-message"
+                rows="5"
+              ></textarea>
+            </div>
+            <button
+              class="btn btn-primary full-width"
+              id="sendBtn"
+              onclick="sendMessage()"
+            >
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">Kartik Nair</span>
+        <span class="logo-bracket">/&gt;</span>
+      </div>
+      <p>Built with <span class="highlight">♥</span> using Python & Flask</p>
+      <p class="footer-copy">© 2025 Kartik Nair. All rights reserved.</p>
+    </footer>
+
+    <button
+      class="scroll-top"
+      id="scrollTop"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    >
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
