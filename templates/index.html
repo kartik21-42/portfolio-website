@@ -3,460 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kartik Nair | Data Analyst</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/style.css') }}"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600;700&family=Inter:wght@300;400;600;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <!-- EmailJS -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script>
-      // ✏️ REPLACE with your EmailJS Public Key
-      (function () {
-        emailjs.init({ publicKey: "KaiPXMYEBP_6PbOZz" });
-      })();
-    </script>
+    <meta name="theme-color" content="#0b141b" />
+    <title>Kartik Nair | Software Engineer &amp; Data Analytics</title>
+    <meta name="description" content="Kartik Nair, Associate Software Engineer at CSC Global. Building software, SQL automation, and data analytics solutions with Python, machine learning, and AWS." />
+    <meta property="og:title" content="Kartik Nair | Software Engineer &amp; Data Analytics" />
+    <meta property="og:description" content="Software engineering meets a data-driven mindset. Explore my work at CSC Global, cloud experience at NSEIT, and Python projects." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
   </head>
   <body>
-    <div id="particles"></div>
-
-    <!-- NAVBAR -->
-    <nav class="navbar">
-      <div class="nav-logo">
-        <span class="logo-bracket">&lt;</span>
-        <span class="logo-name">Kartik Nair</span>
-        <span class="logo-bracket">/&gt;</span>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#hero" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
-    </nav>
-
-    <!-- HERO -->
-    <section id="hero" class="hero">
-      <div class="hero-content">
-        <div class="terminal-window">
-          <div class="terminal-bar">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-            <span class="terminal-title">portfolio.py — Python 3.11</span>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="#hero" aria-label="Kartik Nair home"><span class="brand-mark" aria-hidden="true">kn<span>.</span></span><span>Kartik Nair</span></a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+        <ul class="nav-links" id="nav-links">
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#experience">Experience</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+          <li><a class="nav-resume" href="{{ url_for('resume') }}" target="_blank" rel="noopener noreferrer">Resume <span class="file-icon" aria-hidden="true"></span></a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero container" id="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Associate Software Engineer at CSC Global</p>
+          <h1 id="hero-title">Kartik Nair<span class="accent">.</span></h1>
+          <p class="hero-heading">Building software.<br /><span>Making data work.</span></p>
+          <p class="hero-description">I bring a data analytics mindset to software engineering, turning complex workflows into useful applications, automated pipelines, and clear insights.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#experience">Explore my work</a><a class="button button-secondary" href="{{ url_for('resume') }}" target="_blank" rel="noopener noreferrer">View resume <span class="file-icon" aria-hidden="true"></span></a></div>
+          <div class="hero-links"><span>Dombivali, Maharashtra</span><span class="link-divider" aria-hidden="true"></span><a href="https://github.com/kartik21-42" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/kartik-nair12" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+        </div>
+        <aside class="work-preview" aria-label="Current work highlights">
+          <div class="preview-top"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>engineering.log</span><span class="preview-live">CURRENT</span></div>
+          <div class="preview-body">
+            <p class="code-comment">// where I put ideas into practice</p>
+            <div class="preview-company"><span class="company-monogram" aria-hidden="true">CSC</span><div><h2>CSC Global</h2><p>Associate Software Engineer</p></div></div>
+            <p class="preview-date">SEPTEMBER 2026 &mdash; PRESENT</p>
+            <div class="code-block"><span class="code-purple">const</span> focus = {<br />&nbsp; application: <span class="code-green">"Scope"</span>,<br />&nbsp; work: [<span class="code-green">"SQL"</span>, <span class="code-green">"automation"</span>],<br />&nbsp; demos: [<span class="code-green">"OBO"</span>, <span class="code-green">"MCP"</span>]<br />};</div>
+            <div class="preview-metrics"><div><strong>~15<span>%</span></strong><p>Better processing efficiency</p></div><div><strong>~25<span>%</span></strong><p>Less manual effort</p></div></div>
+            <a class="preview-link" href="#experience">More about my experience</a>
           </div>
-          <div class="terminal-body">
-            <p>
-              <span class="t-green">$</span> <span class="t-blue">python</span>
-              <span class="t-white">portfolio.py</span>
-            </p>
-            <p>
-              <span class="t-purple">Initializing</span
-              ><span class="t-white">...</span>
-            </p>
-            <p>
-              <span class="t-green">Hello, World!</span>
-              <span class="t-white">I'm</span>
-            </p>
-            <h1 class="hero-name" id="typed-name"></h1>
-            <p class="hero-role">
-              <span class="t-yellow">role</span> <span class="t-white">=</span>
-              <span class="t-green">"<span id="typed-role"></span>"</span>
-            </p>
+        </aside>
+      </section>
+      <div class="expertise-strip"><div class="container"><span>Software development</span><span aria-hidden="true">/</span><span>SQL &amp; automation</span><span aria-hidden="true">/</span><span>Data analytics</span><span aria-hidden="true">/</span><span>Cloud computing</span></div></div>
+      <section class="section container" id="about" aria-labelledby="about-title">
+        <div class="section-heading"><p class="eyebrow">A little context</p><h2 id="about-title">Engineering with an<br /><span class="text-muted">analytical perspective.</span></h2></div>
+        <div class="about-grid">
+          <div class="about-copy"><p>I’m a software engineer based in Maharashtra, India, currently working at <strong>CSC Global in Hiranandani Powai, Mumbai</strong>. My work spans Scope application development, SQL-based data processing, automated pipelines, and functionality demos.</p><p>With an <strong>M.Sc. in Data Analytics</strong> and a background in Information Technology, I connect software development with practical data analysis. Before CSC, I worked on Linux scripting and AWS deployments as a Cloud Computing Intern at NSEIT.</p><p>I enjoy the point where a technical idea becomes something useful: a smoother workflow, a clearer dashboard, or a working application.</p></div>
+          <div class="credentials"><div class="credential"><span class="credential-label">EDUCATION</span><h3>M.Sc. in Data Analytics</h3><p>Pillai College of Arts, Commerce and Science</p><div class="credential-meta"><span>2026</span><span>9.36 / 10 SGPA</span></div></div><div class="credential"><span class="credential-label">FOUNDATION</span><h3>Bachelor of Information Technology</h3><p>Pillai College of Arts, Commerce and Science</p><div class="credential-meta"><span>2024</span><span>8.10 / 10 CGPA</span></div></div><div class="certification-note"><span class="accent">+</span><p>Certified in <strong>Agentic AI</strong> through IBM SkillsBuild (2025) and <strong>Power BI</strong> through Pillai College (2024).</p></div></div>
+        </div>
+      </section>
+      <section class="section section-tinted" id="experience" aria-labelledby="experience-title">
+        <div class="container">
+          <div class="section-heading section-heading-row"><div><p class="eyebrow">Experience</p><h2 id="experience-title">From learning to<br /><span class="text-muted">building in practice.</span></h2></div><p class="section-intro">Application development, data automation, and cloud foundations.</p></div>
+          <div class="experience-list">
+            <article class="experience-entry">
+              <div class="experience-meta"><span class="current-badge">Current role</span><p><time datetime="2026-09">Sep 2026</time> &mdash; Present</p><span>Hiranandani Powai, Mumbai</span></div>
+              <div class="experience-content"><div class="experience-title"><div><h3>Associate Software Engineer</h3><p class="company-name">CSC Global</p></div><span class="role-symbol" aria-hidden="true">{ }</span></div><ul class="experience-details"><li>Set up a local development environment for Scope to support application enhancements and feature development.</li><li>Contributed to a new control section in Scope to extend application functionality.</li><li>Used the Scope SQL editor and automated pipelines to improve data-processing efficiency by approximately <strong>15%</strong> and reduce manual effort by approximately <strong>25%</strong>.</li><li>Built OBO and MCP demos to showcase functionality and practical use cases.</li></ul><div class="tags"><span>Scope</span><span>SQL</span><span>Automated pipelines</span><span>Application development</span><span>OBO &amp; MCP demos</span></div></div>
+            </article>
+            <article class="experience-entry">
+              <div class="experience-meta"><span class="past-badge">Internship</span><p><time datetime="2023-04">Apr 2023</time> &mdash; <time datetime="2023-06">Jun 2023</time></p><span>Andheri East, Mumbai</span></div>
+              <div class="experience-content"><div class="experience-title"><div><h3>Cloud Computing Intern</h3><p class="company-name">NSEIT</p></div><span class="role-symbol" aria-hidden="true">[ ]</span></div><ul class="experience-details"><li>Optimized Linux environments with scripting, reducing manual workload by approximately <strong>20%</strong> and improving system efficiency.</li><li>Worked with AWS EC2, S3, IAM, and VPC to support secure, consistent cloud deployments, improving reliability and security by approximately <strong>25%</strong>.</li><li>Automated cloud setups and documented <strong>10+ AWS best practices</strong>, cutting setup time by approximately <strong>10 hours per month</strong> and improving onboarding.</li></ul><div class="tags"><span>AWS EC2 / S3 / IAM / VPC</span><span>Linux</span><span>Scripting</span><span>Cloud automation</span></div></div>
+            </article>
           </div>
         </div>
-        <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">
-            <i class="fas fa-code"></i> View Projects
-          </a>
-          <a href="/resume" target="_blank" class="btn btn-secondary">
-            <i class="fas fa-file-alt"></i> My Resume
-          </a>
-          <a href="#contact" class="btn btn-outline">
-            <i class="fas fa-envelope"></i> Hire Me
-          </a>
+      </section>
+      <section class="section container" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading section-heading-row"><div><p class="eyebrow">Selected projects</p><h2 id="projects-title">Ideas, built into<br /><span class="text-muted">working applications.</span></h2></div><div class="project-filters" role="group" aria-label="Filter projects"><button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All work</button><button class="filter-button" type="button" data-filter="analytics" aria-pressed="false">Analytics</button><button class="filter-button" type="button" data-filter="ai" aria-pressed="false">AI / ML</button></div></div>
+        <div class="projects-grid" id="project-results" aria-live="polite">
+          <article class="project-card" data-category="analytics ai">
+            <div class="project-visual fraud-visual" aria-hidden="true"><div class="visual-caption">TRANSACTION ANALYTICS <span>PYTHON / CHART.JS</span></div><div class="chart-grid"><div class="chart-label">MODEL PRECISION</div><div class="chart-row"><span>Baseline</span><div class="chart-track"><div class="chart-bar chart-bar-baseline"></div></div><strong>6.4%</strong></div><div class="chart-row"><span>Improved</span><div class="chart-track"><div class="chart-bar chart-bar-improved"></div></div><strong>83.8%</strong></div></div><div class="visual-foot"><span>284,000+ transactions analyzed</span><span>97%+ ROC-AUC</span></div></div>
+            <div class="project-body"><p class="project-type">DATA ANALYTICS &amp; MACHINE LEARNING</p><h3>Finding the signal in fraud.</h3><p class="project-name">Credit Card Fraud Detection</p><p>Analyzed 284,000+ real credit card transactions to identify fraud patterns by amount and time. Compared Logistic Regression and Random Forest models, improving precision from 6.4% to 83.8% while maintaining 97%+ ROC-AUC, then visualized the results in an interactive dashboard.</p><div class="tags"><span>Python</span><span>Chart.js</span><span>Predictive analytics</span></div><div class="project-actions"><a href="https://mellifluous-cassata-865afc.netlify.app/" target="_blank" rel="noopener noreferrer">Live project</a><a href="https://github.com/kartik21-42/Credit-Card-Fraud-Detection" target="_blank" rel="noopener noreferrer" aria-label="View Credit Card Fraud Detection source on GitHub">Source code</a></div></div>
+          </article>
+          <article class="project-card" data-category="ai">
+            <div class="project-visual mindease-visual" aria-hidden="true"><div class="visual-caption">MINDEASE AI <span>PYTHON / FLASK</span></div><div class="mindease-art"><div class="wellness-orbit orbit-outer"></div><div class="wellness-orbit orbit-inner"></div><div class="wellness-center"><span>m</span><p>space to reflect.</p></div></div><div class="visual-foot"><span>Text analysis &amp; mood tracking</span><span>~80% model accuracy</span></div></div>
+            <div class="project-body"><p class="project-type">APPLIED AI &amp; WEB DEVELOPMENT</p><h3>A little more space for wellbeing.</h3><p class="project-name">MindEase AI</p><p>A Python and Flask app that uses Logistic Regression (~80% accuracy) to classify mental health conditions from text. Combines personalized wellness recommendations, mood tracking, and longitudinal data visualization.</p><div class="tags"><span>Python / Flask</span><span>Machine learning</span><span>JSON</span></div><div class="project-actions"><a href="https://mindease-ai-n3n0.onrender.com" target="_blank" rel="noopener noreferrer">Live project</a><a href="https://github.com/kartik21-42/MindEase-AI" target="_blank" rel="noopener noreferrer" aria-label="View MindEase AI source on GitHub">Source code</a></div></div>
+          </article>
         </div>
-        <div class="social-links">
-          <a
-            href="https://github.com/kartiknair"
-            target="_blank"
-            class="social-btn"
-            ><i class="fab fa-github"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/kartik-nair12"
-            target="_blank"
-            class="social-btn"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="code-card">
-          <pre
-            class="code-snippet"
-          ><span class="c-purple">class</span> <span class="c-yellow">DataAnalyst</span><span class="c-white">:</span>
-  <span class="c-blue">def</span> <span class="c-green">__init__</span><span class="c-white">(self):</span>
-    <span class="c-white">self.name</span> <span class="c-white">=</span> <span class="c-orange">"Kartik Nair"</span>
-    <span class="c-white">self.skills</span> <span class="c-white">= [</span>
-      <span class="c-orange">"Python"</span><span class="c-white">,</span>
-      <span class="c-orange">"SQL"</span><span class="c-white">,</span>
-      <span class="c-orange">"Power BI"</span><span class="c-white">,</span>
-      <span class="c-orange">"AI / ML"</span>
-    <span class="c-white">]</span>
-    <span class="c-white">self.passion</span> <span class="c-white">=</span>
-      <span class="c-orange">"Turning data into insights"</span>
-
-  <span class="c-blue">def</span> <span class="c-green">say_hello</span><span class="c-white">(self):</span>
-    <span class="c-purple">return</span> <span class="c-orange">"Let's collaborate!"</span></pre>
-        </div>
-      </div>
-      <!-- Scroll Down Indicator -->
-      <a href="#about" class="scroll-indicator">
-        <span class="scroll-text">Scroll Down</span>
-        <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
-      </a>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="about section">
-      <div class="section-header">
-        <span class="section-tag">Beyond the resume ! </span>
-        <h2 class="section-title">Who I <span class="highlight">Am</span></h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-avatar">
-          <div class="avatar-ring">
-            <div class="avatar-inner">
-              <i class="fas fa-user-astronaut fa-4x"></i>
-            </div>
-          </div>
-          <div class="status-badge">
-            <span class="status-dot"></span> Open to Opportunities
-          </div>
-        </div>
-        <div class="about-text">
-          <h3>Hi, I'm <span class="highlight">Kartik Nair</span> 👋</h3>
-          <p>
-            I'm a passionate <strong>Data Analyst</strong> from
-            <strong>Mumbai, India</strong>, working in the
-            <strong>IT field</strong>. I love transforming raw data into
-            meaningful insights that drive smart decisions.
-          </p>
-          <p>
-            With hands-on experience in Python, SQL, Power BI and AI tools, I
-            enjoy building data pipelines, dashboards, and analytical solutions
-            that make an impact. ☕
-          </p>
-          <div class="about-stats">
-            <div class="stat-card">
-              <span class="stat-num" data-target="2">0</span>
-              <span class="stat-label">Projects</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-num" data-target="0">0</span>
-              <span class="stat-label">Fresher</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-num" data-target="4">0</span>+
-              <span class="stat-label">Technologies</span>
-            </div>
-          </div>
-          <div class="about-actions">
-            <a href="/resume" target="_blank" class="btn btn-primary">
-              <i class="fas fa-download"></i> Download Resume
-            </a>
-            <a href="#contact" class="btn btn-outline">
-              <i class="fas fa-paper-plane"></i> Hire Me
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="skills section">
-      <div class="section-header">
-        <span class="section-tag">$ cat skills.txt</span>
-        <h2 class="section-title">
-          What I <span class="highlight">Bring</span>
-        </h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3><i class="fas fa-database"></i> Data & Analytics</h3>
-          <div class="skill-items">
-            <div class="skill-item">
-              <i class="fab fa-python"></i><span>Python</span>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="85"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <i class="fas fa-database"></i><span>SQL</span>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="80"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <i class="fas fa-chart-bar"></i><span>Power BI</span>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="75"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <i class="fas fa-brain"></i><span>AI / ML</span>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="70"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3><i class="fas fa-tools"></i> Tools & Cloud</h3>
-          <div class="skill-items">
-            <div class="skill-item">
-              <i class="fab fa-git-alt"></i><span>Git / GitHub</span>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="75"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <i class="fab fa-aws"></i><span>AWS (Cloud)</span>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="60"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <i class="fas fa-table"></i><span>Excel / Sheets</span>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="80"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3><i class="fas fa-code"></i> Programming</h3>
-          <div class="skill-items">
-            <div class="skill-item">
-              <i class="fab fa-html5"></i><span>HTML / CSS</span>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="70"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <i class="fas fa-flask"></i><span>Flask</span>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="65"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <i class="fas fa-chart-line"></i><span>Data Visualization</span>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="78"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="projects section">
-      <div class="section-header">
-        <span class="section-tag"># projects.py</span>
-        <h2 class="section-title">
-          My <span class="highlight">Projects</span>
-        </h2>
-      </div>
-      <div class="projects-filter">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="python">Python</button>
-        <button class="filter-btn" data-filter="data">AI</button>
-        <button class="filter-btn" data-filter="ai">Data</button>
-      </div>
-      <div class="projects-grid">
-        <div class="project-card" data-category="data python">
-          <div class="project-header">
-            <div class="project-icon"><i class="fas fa-brain"></i></div>
-            <div class="project-links">
-              <a
-                href="https://github.com/kartik21-42/MindEase-AI/tree/main"
-                target="_blank"
-                title="GitHub"
-                ><i class="fab fa-github"></i
-              ></a>
-              <a
-                href="https://mindease-ai-n3n0.onrender.com"
-                target="_blank"
-                title="Live Demo"
-                ><i class="fas fa-external-link-alt"></i
-              ></a>
-            </div>
-          </div>
-          <h3>MindEase AI — Mental Wellness Web App</h3>
-          <p>
-            A Python-based ML web app that classifies mental health conditions
-            from user and social media text using Logistic Regression with ~80%
-            accuracy. Features personalized wellness recommendations, mood
-            tracking, and longitudinal data visualization — processing 100+
-            inputs per session.
-          </p>
-          <div class="project-tags">
-            <span>Python</span><span>Machine Learning Model</span
-            ><span>AI</span>
-          </div>
-        </div>
-
-        <div class="project-card" data-category="ai python">
-          <div class="project-header">
-            <div class="project-icon"><i class="fas fa-chart-bar"></i></div>
-            <div class="project-links">
-              <a
-                href="https://github.com/kartik21-42/Credit-Card-Fraud-Detection"
-                target="_blank"
-                title="GitHub"
-                ><i class="fab fa-github"></i
-              ></a>
-              <a
-                href="https://mellifluous-cassata-865afc.netlify.app/"
-                target="_blank"
-                title="Live Demo"
-                ><i class="fas fa-external-link-alt"></i
-              ></a>
-            </div>
-          </div>
-          <h3>Credit Card Fraud Detection Using Data Analytics</h3>
-          <p>
-            A data analysis project on 284,000+ real credit card transactions,
-            uncovering fraud patterns by amount and time, and comparing Logistic
-            Regression vs. Random Forest models to detect fraud accurately —
-            visualized through an interactive dashboard.
-          </p>
-          <div class="project-tags">
-            <span>Python</span><span>Machine Learning</span><span>Data</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact section">
-      <div class="section-header">
-        <span class="section-tag">Let's Talk</span>
-        <h2 class="section-title">
-          Get in <span class="highlight">Touch</span>
-        </h2>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h3>Let's work together! 🚀</h3>
-          <p>
-            I'm actively looking for Data Analyst / IT roles. If you're hiring
-            or have a project in mind, I'd love to hear from you!
-          </p>
-          <div class="contact-items">
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Thane, Maharashtra, India</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:kartik.nair1717@gmail.com"
-                >kartik.nair1717@gmail.com</a
-              >
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <span>+91 8169142336</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-briefcase"></i>
-              <span>Available Immediately · Fresher</span>
-            </div>
-          </div>
-          <div class="contact-social">
-            <a href="https://github.com/kartik21-42" target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a href="https://www.linkedin.com/in/kartik-nair12" target="_blank"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-          </div>
-        </div>
-        <div class="contact-form-wrapper">
-          <div class="contact-form">
-            <div class="form-group">
-              <label>Your Name</label>
-              <input
-                type="text"
-                placeholder="HR / Recruiter Name"
-                id="cf-name"
-              />
-            </div>
-            <div class="form-group">
-              <label>Your Email</label>
-              <input type="email" placeholder="hr@company.com" id="cf-email" />
-            </div>
-            <div class="form-group">
-              <label>Company / Subject</label>
-              <input
-                type="text"
-                placeholder="Company Name or Subject"
-                id="cf-subject"
-              />
-            </div>
-            <div class="form-group">
-              <label>Message</label>
-              <textarea
-                placeholder="Tell me about the role or opportunity..."
-                id="cf-message"
-                rows="5"
-              ></textarea>
-            </div>
-            <button
-              class="btn btn-primary full-width"
-              id="sendBtn"
-              onclick="sendMessage()"
-            >
-              <i class="fas fa-paper-plane"></i> Send Message
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-content">
-        <span class="logo-bracket">&lt;</span>
-        <span class="logo-name">Kartik Nair</span>
-        <span class="logo-bracket">/&gt;</span>
-      </div>
-      <p>Built with <span class="highlight">♥</span> using Python & Flask</p>
-      <p class="footer-copy">© 2025 Kartik Nair. All rights reserved.</p>
-    </footer>
-
-    <button
-      class="scroll-top"
-      id="scrollTop"
-      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-    >
-      <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+      </section>
+      <section class="section section-tinted" id="skills" aria-labelledby="skills-title"><div class="container">
+        <div class="section-heading"><p class="eyebrow">Technical toolkit</p><h2 id="skills-title">The tools behind <span class="text-muted">the work.</span></h2><p class="section-description">Built through professional experience, academic projects, and continued learning.</p></div>
+        <div class="skills-grid"><article class="skill-category"><span class="skill-symbol" aria-hidden="true">&lt;/&gt;</span><h3>Software &amp; automation</h3><p>Building applications and making workflows more efficient.</p><ul class="skill-list"><li>Python</li><li>Flask</li><li>Scope development</li><li>SQL editor &amp; automated pipelines</li><li>HTML / CSS</li><li>Git / GitHub</li><li>OBO &amp; MCP demos</li></ul></article><article class="skill-category"><span class="skill-symbol" aria-hidden="true">{ : }</span><h3>Data &amp; applied AI</h3><p>From querying data to communicating meaningful insights.</p><ul class="skill-list"><li>SQL &amp; relational databases</li><li>Data analysis &amp; visualization</li><li>Power BI</li><li>Excel / Sheets</li><li>Machine learning</li><li>Predictive analytics</li><li>Agentic AI &amp; prompt engineering</li></ul></article><article class="skill-category"><span class="skill-symbol" aria-hidden="true">[ ~ ]</span><h3>Cloud &amp; infrastructure</h3><p>Practical foundations for consistent cloud environments.</p><ul class="skill-list"><li>AWS EC2</li><li>Amazon S3</li><li>AWS IAM</li><li>Amazon VPC</li><li>Linux</li><li>Scripting &amp; cloud automation</li><li>Technical documentation</li></ul></article></div>
+      </div></section>
+      <section class="section container contact-section" id="contact" aria-labelledby="contact-title"><div class="contact-grid"><div class="contact-copy"><p class="eyebrow">Let’s connect</p><h2 id="contact-title">Good work starts<br /><span class="text-muted">with a conversation.</span></h2><p>Have a software, automation, or data project in mind? I’m happy to connect with people building useful things.</p><a class="contact-email" href="mailto:kartik.nair1717@gmail.com">kartik.nair1717@gmail.com</a><p class="contact-location">Dombivali, Maharashtra, India</p><div class="contact-links"><a href="https://github.com/kartik21-42" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/kartik-nair12" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="{{ url_for('resume') }}" target="_blank" rel="noopener noreferrer">Resume</a></div></div>
+        <form class="contact-form" id="contact-form"><div class="form-row"><div class="form-field"><label for="cf-name">Your name <span aria-hidden="true">*</span></label><input id="cf-name" name="name" autocomplete="name" placeholder="Alex Smith" required maxlength="120" /></div><div class="form-field"><label for="cf-email">Email address <span aria-hidden="true">*</span></label><input id="cf-email" name="email" type="email" autocomplete="email" placeholder="alex@company.com" required maxlength="254" /></div></div><div class="form-field"><label for="cf-subject">Subject</label><input id="cf-subject" name="subject" placeholder="What would you like to discuss?" maxlength="200" /></div><div class="form-field"><label for="cf-message">Your message <span aria-hidden="true">*</span></label><textarea id="cf-message" name="message" placeholder="A little about your idea or opportunity..." rows="5" required maxlength="5000"></textarea></div><button class="button button-primary" id="send-button" type="submit">Send message</button><p class="form-status" id="form-status" role="status" aria-live="polite"></p></form>
+      </div></section>
+    </main>
+    <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="#hero"><span class="brand-mark" aria-hidden="true">kn<span>.</span></span><span>Kartik Nair</span></a><p>Thoughtfully built with Python &amp; Flask.</p><p>&copy; {{ current_year }} Kartik Nair</p></div></footer>
   </body>
 </html>

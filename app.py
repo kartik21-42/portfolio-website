@@ -1,11 +1,12 @@
 from flask import Flask, render_template, send_file
+from datetime import datetime, timezone
 import os
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index.html', current_year=datetime.now(timezone.utc).year)
 
 @app.route('/resume')
 def resume():
