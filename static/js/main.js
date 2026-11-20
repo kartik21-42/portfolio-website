@@ -1,3 +1,17 @@
+// Each new page load starts in light mode; visitors can switch either way.
+const themeToggle = document.getElementById('theme-toggle');
+const themeColor = document.querySelector('meta[name="theme-color"]');
+
+themeToggle.addEventListener('click', () => {
+  const dark = document.documentElement.dataset.theme !== 'dark';
+  document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+  themeToggle.setAttribute('aria-pressed', String(dark));
+  const label = dark ? 'Switch to light theme' : 'Switch to dark theme';
+  themeToggle.setAttribute('aria-label', label);
+  themeToggle.title = label;
+  themeColor.setAttribute('content', dark ? '#0b141b' : '#f7faf8');
+});
+
 // Navigation stays usable without waiting for animations or third-party services.
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('nav-links');

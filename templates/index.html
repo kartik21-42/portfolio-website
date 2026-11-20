@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0b141b" />
+    <meta name="theme-color" content="#f7faf8" />
     <title>Kartik Nair | Software Engineer &amp; Data Analytics</title>
     <meta name="description" content="Kartik Nair, Associate Software Engineer at CSC Global. Building software, SQL automation, and data analytics solutions with Python, machine learning, and AWS." />
     <meta property="og:title" content="Kartik Nair | Software Engineer &amp; Data Analytics" />
@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
-    <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
   </head>
   <body>
@@ -31,12 +31,15 @@
           <li><a class="nav-link" href="#contact">Contact</a></li>
           <li><a class="nav-resume" href="{{ url_for('resume') }}" target="_blank" rel="noopener noreferrer">Resume <span class="file-icon" aria-hidden="true"></span></a></li>
         </ul>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" title="Switch to dark theme">
+          <svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z" /></svg>
+          <svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" /></svg>
+        </button>
       </nav>
     </header>
     <main id="main">
       <section class="hero container" id="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Associate Software Engineer at CSC Global</p>
           <h1 id="hero-title">Kartik Nair<span class="accent">.</span></h1>
           <p class="hero-heading">Building software.<br /><span>Making data work.</span></p>
           <p class="hero-description">I bring a data analytics mindset to software engineering, turning complex workflows into useful applications, automated pipelines, and clear insights.</p>
